@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jaen Fantasy · 2026/27</title>
+<style>
+:root{--bg:#0b0f15;--card:#141a22;--card2:#1b2430;--text:#f4f7fb;--sub:#8f9baa;--green:#28e18b;--yellow:#ffd166;--red:#ff5f70;--blue:#5da9ff;--line:#293342;--purple:#9b7cff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#172131 0,#0b0f15 42%);color:var(--text);font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:14px}.wrap{max-width:680px;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.logo{font-weight:950;font-size:19px;letter-spacing:.5px}.logo span{color:var(--green)}button{font:inherit;cursor:pointer}.top button,.mini{background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 10px}.card,.sec{background:rgba(20,26,34,.96);border:1px solid var(--line);border-radius:18px;padding:15px;margin-bottom:13px;box-shadow:0 8px 28px #0003}.hero{position:relative;overflow:hidden;background:linear-gradient(145deg,#1a2634,#11161e)}.hero:after{content:"";position:absolute;width:170px;height:170px;border-radius:50%;right:-75px;top:-75px;background:var(--green);opacity:.07}.player{display:flex;gap:13px;align-items:center}.avatar{width:76px;height:76px;border-radius:50%;border:2px solid var(--line);background:#222b37;display:grid;place-items:center;overflow:hidden;flex:none;position:relative}.avatar img{width:100%;height:100%;object-fit:cover}.avatar span{font-size:30px}.avatar button{position:absolute;bottom:2px;right:2px;border:0;border-radius:50%;width:25px;height:25px;background:var(--text);color:#111;font-weight:900}.identity{flex:1}.ovr{font-size:37px;line-height:1;font-weight:950;color:var(--yellow)}.name{font-size:21px;font-weight:900;background:none;border:0;color:var(--text);width:100%;padding:4px 0}.pos{display:inline-block;color:var(--sub);font-size:12px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:14px}.stat,.kpi{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:9px;text-align:center}.stat b,.kpi b{display:block;font-size:18px}.stat small,.kpi small{color:var(--sub);font-size:10px}.market{margin-top:11px;background:#111820;border:1px solid var(--line);border-radius:13px;padding:11px}.marketrow{display:flex;justify-content:space-between;align-items:end}.marketvalue{font-size:27px;font-weight:950}.marketdelta{font-weight:900;color:var(--green)}.marketdelta.down{color:var(--red)}.marketnote{font-size:10px;color:var(--sub);margin-top:6px}.chart{width:100%;height:150px;display:block}.chart text{fill:var(--sub);font-size:9px}.chart .grid{stroke:var(--line);stroke-width:1}.chart .line{fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.chart .area{fill:var(--green);opacity:.08}.chart .dot{fill:var(--green)}.sectiontitle{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.sectiontitle h3{margin:0}.tabs{display:flex;gap:7px;overflow:auto;margin-bottom:10px}.tab{white-space:nowrap;background:var(--card2);border:1px solid var(--line);color:var(--sub);border-radius:999px;padding:7px 10px}.tab.active{color:#111;background:var(--green);border-color:var(--green);font-weight:900}.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.add{width:100%;background:var(--green);color:#06110b;border:0;border-radius:12px;padding:12px;font-weight:950}.save{background:var(--yellow);color:#15110a;border:0;border-radius:12px;padding:12px;font-weight:950;width:100%;margin-top:10px}.form{display:none;margin-top:12px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.field label{font-size:10px;color:var(--sub);display:block;margin:7px 0 3px}input,select{width:100%;background:var(--card2);border:1px solid var(--line);color:var(--text);border-radius:9px;padding:9px}fieldset{border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:9px}legend{font-size:11px;color:var(--sub)}.match{background:linear-gradient(145deg,#1b2430,#151b24);border:1px solid var(--line);border-radius:15px;padding:12px;margin:8px 0;cursor:pointer;transition:.15s}.match:active{transform:scale(.99)}.r1{display:flex;justify-content:space-between;gap:10px}.rival{font-size:16px;font-weight:900}.result{font-size:10px;color:var(--sub);margin-top:3px}.matchscore{font-size:22px;font-weight:950;color:var(--green)}.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}.chip{background:#10161e;border:1px solid var(--line);border-radius:999px;padding:5px 8px;font-size:10px;color:#cbd2db}.pointrow{display:flex;justify-content:space-between;align-items:center;padding:10px 11px;margin:6px 0;border:1px solid var(--line);border-radius:11px;background:#111820;gap:10px}.pointrow:last-child{border-bottom:1px solid var(--line)}.pointrow:last-child{border-bottom:0}.pointname{font-weight:800;text-transform:uppercase;font-size:11px;letter-spacing:.25px}.pointvalue{font-size:13px;color:var(--text);font-weight:900;margin-left:auto}.zero{color:var(--sub)}.pointgain{display:flex;align-items:center;gap:8px;min-width:90px;justify-content:flex-end}.pointformula{font-size:10px;color:var(--sub)}.plus{color:var(--green);font-weight:950}.minus{color:var(--red);font-weight:950}.zero{color:var(--sub);font-weight:800}.scorebox{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:10px 0}.score{background:var(--card2);border:1px solid var(--line);border-radius:12px;text-align:center;padding:10px}.score b{display:block;font-size:22px}.score small{font-size:10px;color:var(--sub)}.score.total{border-color:#45604f}.daznbox{background:linear-gradient(145deg,#211c34,#171a25);border:1px solid #443a64;border-radius:13px;padding:12px;margin-top:10px}.daznmain{display:flex;justify-content:space-between;align-items:center}.dazn10{font-size:30px;font-weight:950;color:var(--purple)}.dazn4{font-weight:900}.breakgrid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:10px}.smallbox{background:#121722;border:1px solid #303044;border-radius:10px;padding:8px}.smallbox b{display:block}.smallbox small{color:var(--sub);font-size:9px}.modal{position:fixed;inset:0;background:#000b;display:none;z-index:20;padding:12px;overflow:auto}.modal.open{display:block}.modalcard{max-width:680px;margin:20px auto;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:15px}.close{float:right;background:var(--card2);border:1px solid var(--line);color:var(--text);border-radius:50%;width:34px;height:34px}.detailstats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:10px 0}.detailstat{background:var(--card2);border-radius:10px;padding:8px;text-align:center}.detailstat b{display:block;font-size:17px}.detailstat small{font-size:9px;color:var(--sub)}.bars{height:130px;display:flex;align-items:flex-end;gap:5px;overflow:auto;padding:4px 2px}.barwrap{min-width:28px;height:120px;display:flex;align-items:flex-end;justify-content:center;position:relative}.bar{width:22px;border-radius:6px 6px 2px 2px;background:var(--green);min-height:4px}.barvalue{font-size:11px;font-weight:900;margin-bottom:3px;color:var(--text);min-height:14px}.barwrap{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:140px}
+.barlabel{position:absolute;bottom:-1px;font-size:8px;color:var(--sub);transform:translateY(14px)}.note{font-size:10px;color:var(--sub);line-height:1.45}.empty{text-align:center;color:var(--sub);padding:22px}.actions{display:flex;gap:7px;margin-top:8px}.actions button{flex:1}.danger{color:var(--red)!important}
+@media(max-width:430px){.stats{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}.detailstats{grid-template-columns:1fr 1fr}.scorebox{grid-template-columns:1fr 1fr}.score.total{grid-column:span 2}}
+</style>
+</head>
+<body><div class="wrap">
+<div class="top"><div class="logo">MI <span>FANTASY</span></div><div><button onclick="exportData()">Exportar</button></div></div>
+
+<div class="card hero"><div class="player"><div class="avatar"><img id="photo" style="display:none"><span id="avatarText">J</span><button onclick="photoInput.click()">+</button></div><div class="identity"><div style="display:flex;align-items:center;gap:8px"><input class="name" id="name" placeholder="Jaen" onchange="meta()"><div id="headerTotal" style="font-size:25px;font-weight:950;color:var(--yellow);white-space:nowrap">0 pts</div></div><input type="hidden" id="pos" value="MED"><span class="pos">CEN</span></div></div><input id="photoInput" type="file" accept="image/*" hidden>
+<div class="stats"><div class="stat"><b id="tc">0</b><small>Puntos totales</small></div><div class="stat"><b id="an">--</b><small>Valoración global /10</small></div><div class="stat"><b id="totalMinHeader">0/0</b><small>Minutos jugados</small></div><div class="stat"><b id="minsPctHeader">0%</b><small>% minutos</small></div></div>
+<div class="market"><div class="marketrow"><div><div class="marketvalue" id="marketValue">0,00 M€</div><div class="marketnote" id="marketDate">Valor de mercado simulado</div></div><div class="marketdelta" id="marketDelta">—</div></div></div></div>
+
+<div class="sec"><div class="sectiontitle"><h3>Valor de mercado</h3></div><svg id="marketChart" class="chart" viewBox="0 0 640 150" preserveAspectRatio="none"></svg><div class="note">Evolución simulada. Se actualiza como máximo una vez al día y queda guardada en este dispositivo.</div></div>
+
+<div class="sec"><div class="sectiontitle"><h3>Puntos de temporada</h3></div><div class="kpis" id="seasonKpis"></div><div style="margin-top:13px"><div class="note" style="margin-bottom:5px">Fantasy + DAZN por partido</div><div class="bars" id="bars"></div></div></div>
+
+<div class="sec"><button class="add" onclick="toggleForm()">+ Añadir partido</button><div class="form" id="form"><input type="hidden" id="edit" value="-1"><div class="grid2"><div class="field"><label>Fecha</label><input type="date" id="date"></div><div class="field"><label>Competición</label><select id="competition"><option value="Liga">Liga</option><option value="Amistoso">Amistoso</option><option value="Torneo">Torneo</option><option value="Copa">Copa</option><option value="Otro">Otro</option></select></div><div class="field"><label>Rival</label><input id="rival" placeholder="Rival"></div><div class="field"><label>Minutos reglamentarios</label><input type="number" id="min" value="90"><small class="note">El descuento no suma minutos; sus estadísticas sí.</small></div><div class="field"><label>Resultado</label><select id="res"><option value="V">Victoria</option><option value="E">Empate</option><option value="D">Derrota</option></select></div></div>
+<fieldset><legend>Ataque</legend><div class="grid2"><div class="field"><label>Goles</label><input type="number" id="goals" value="0"></div><div class="field"><label>Asistencias</label><input type="number" id="assists" value="0"></div><div class="field"><label>Asistencia sin gol</label><input type="number" id="assistnogoal" value="0"></div><div class="field"><label>Tiros</label><input type="number" id="shots" value="0"></div><div class="field"><label>Tiros a puerta</label><input type="number" id="shotson" value="0"></div><div class="field"><label>Balones al área</label><input type="number" id="crosses" value="0"></div></div></fieldset>
+<fieldset><legend>Pase y 1v1</legend><div class="grid2"><div class="field"><label>Pases completados</label><input type="number" id="passok" value="0"></div><div class="field"><label>Pases fallados</label><input type="number" id="passfail" value="0"></div><div class="field"><label>Regates completados</label><input type="number" id="dribbles" value="0"></div><div class="field"><label>Veces regateado</label><input type="number" id="beaten" value="0"></div><div class="field"><label>Pérdidas</label><input type="number" id="lost" value="0"></div><div class="field"><label>Faltas provocadas</label><input type="number" id="foulr" value="0"></div></div></fieldset>
+<fieldset><legend>Defensa</legend><div class="grid2"><div class="field"><label>Recuperaciones</label><input type="number" id="recov" value="0"></div><div class="field"><label>Intercepciones</label><input type="number" id="inter" value="0"></div><div class="field"><label>Despejes</label><input type="number" id="clear" value="0"></div><div class="field"><label>Aéreos ganados</label><input type="number" id="duels" value="0"></div><div class="field"><label>Aéreos perdidos</label><input type="number" id="duelslost" value="0"></div><div class="field"><label>Faltas cometidas</label><input type="number" id="foulc" value="0"></div></div></fieldset>
+<fieldset><legend>Disciplina / penaltis / portería</legend><div class="grid2"><div class="field"><label>Goles encajados</label><input type="number" id="conceded" value="0"></div><div class="field"><label>Amarillas</label><input type="number" id="yellow" value="0"></div><div class="field"><label>Segundas amarillas</label><input type="number" id="secondyellow" value="0"></div><div class="field"><label>Roja directa</label><input type="number" id="red" value="0"></div><div class="field"><label>Penalti provocado</label><input type="number" id="penalprov" value="0"></div><div class="field"><label>Penalti cometido</label><input type="number" id="penalcom" value="0"></div><div class="field"><label>Penaltis fallados</label><input type="number" id="penmiss" value="0"></div><div class="field"><label>Goles en propia</label><input type="number" id="owngoal" value="0"></div><div class="field"><label>Paradas</label><input type="number" id="saves" value="0"></div><div class="field"><label>Penaltis parados</label><input type="number" id="penstop" value="0"></div></div></fieldset><button class="save" onclick="saveMatch()">Guardar partido</button></div></div>
+
+<div class="sec"><div class="sectiontitle"><h3>Estadísticas acumuladas</h3></div><div class="kpis" id="p90"></div><p class="note">Se muestran los totales acumulados y su referencia por 90 minutos. Los minutos se expresan como jugados / disponibles y también en porcentaje.</p></div>
+<div class="sec"><div class="sectiontitle"><h3>Historial de partidos</h3><span class="note">Toca una ficha</span></div><div id="list"></div></div>
+</div>
+
+<div class="modal" id="modal"><div class="modalcard"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+<script>
+const K='jaen_fantasy_v5_4';const EMPTY={name:'Jaen',pos:'MED',matches:[],marketValue:0,marketHistory:[],marketUpdated:'',photo:''};let s={...EMPTY};try{const raw=localStorage.getItem(K);if(raw){const saved=JSON.parse(raw);if(saved&&typeof saved==='object')s={...EMPTY,...saved}}}catch(e){console.warn('Persistencia local no disponible:',e)}if(!Array.isArray(s.matches))s.matches=[];s.matches.forEach(m=>{if(typeof m.secondyellow!=='number')m.secondyellow=0});if(!Array.isArray(s.marketHistory))s.marketHistory=[];const ids=['goals','assists','assistnogoal','shots','shotson','crosses','passok','passfail','dribbles','beaten','lost','foulr','recov','inter','clear','duels','duelslost','foulc','conceded','yellow','secondyellow','red','penalprov','penalcom','penmiss','owngoal','saves','penstop'];const q=id=>document.getElementById(id),v=id=>Math.max(0,parseInt(q(id).value)||0);function save(){try{localStorage.setItem(K,JSON.stringify(s));return true}catch(e){console.error('No se pudo guardar el progreso:',e);alert('El navegador no permite guardar datos en este modo. Abre la app desde una página web (Chrome) para conservar el progreso.');return false}}function meta(){s.name=q('name').value||'Jaen';s.pos=q('pos').value;save();render()}function reset(){q('edit').value=-1;q('date').value=new Date().toISOString().slice(0,10);q('rival').value='';q('competition').value='Liga';q('min').value=90;q('res').value='V';ids.forEach(x=>q(x).value=0)}function toggleForm(){q('form').style.display=q('form').style.display==='block'?'none':'block';if(q('form').style.display==='block')reset()}function fantasy(m,p){
+ let x=0;
+ x+=m.min>60?2:m.min>0?1:0;
+ x+=m.goals*(p==='DEL'?4:p==='MED'?5:6);
+ x+=m.assists*3+m.assistnogoal;
+ x+=Math.floor(m.crosses/2);
+ x+=m.penalprov*2-m.penalcom*2;
+ x+=Math.floor(m.clear/3);
+ x-=m.penmiss*2+m.owngoal*2;
+ if(['POR','DEF','MED'].includes(p)&&m.min>60&&m.conceded===0)x+=2;
+ x-=Math.floor(m.conceded/2);
+ x-=m.yellow+m.secondyellow+m.red*3;
+ x+=Math.floor(m.shotson/2)+Math.floor(m.dribbles/2)+Math.floor(m.recov/5);
+ x-=Math.floor(m.lost/(p==='DEL'?12:p==='MED'?10:8));
+ if(p==='POR')x+=Math.floor(m.saves/2);
+ return x
+}
+function dazn(m,p){
+ let M=Math.max(1,m.min||0),r=x=>x*90/M,sat=x=>1-Math.exp(-Math.max(0,x)),inv=x=>Math.exp(-Math.max(0,x));
+ let ro=r(m.recov||0),pa=r(m.passok||0),pf=r(m.passfail||0),dr=r(m.dribbles||0),be=r(m.beaten||0),lo=r(m.lost||0),cl=r(m.clear||0),du=r(m.duels||0),dl=r(m.duelslost||0),it=r(m.inter||0),sh=r(m.shots||0),so=r(m.shotson||0),cr=r(m.crosses||0),fc=r(m.foulc||0),fr=r(m.foulr||0);
+ let pt=(m.passok+m.passfail)?m.passok/(m.passok+m.passfail):0,ap=(m.duels+m.duelslost)?m.duels/(m.duels+m.duelslost):0;
+ let raw=18*sat(ro/7)+10*sat(it/2.5)+8*sat(cl/2.5)+8*sat(du/3.5)*(.55+.45*ap)+6*inv(dl/3.5)+5*inv(be/1.5)+20*sat(pa/42)*(.55+.45*pt)+7*sat(pa/65)+5*inv(pf/7)+4*sat(cr/3)+8*sat(dr/3.2)+6*inv(be/1.2)+4*inv(lo/4)+8*sat(sh/1.7)+5*sat(so/.7)+12*(m.goals||0)+9*(m.assists||0)+3*(m.assistnogoal||0)-5*fc/5-10*(m.yellow||0)-10*(m.secondyellow||0)-35*(m.red||0)-8*(m.owngoal||0)-8*(m.penmiss||0)+3*sat(fr/2.5);
+ raw*=(.88+.12*Math.min(1,M/75));raw*=p==='MED'?1:p==='DEF'?.96:p==='DEL'?.92:.90;
+ return Math.max(1,Math.min(10,Math.round((5+raw/22)*10)/10));
+}
+function dp(n){return Math.min(4,Math.max(0,Math.floor(n/10*4+.5)))}
+function daValue(m,name){const map={'Recuperaciones':'recov','Intercepciones':'inter','Despejes':'clear','Duelos aéreos':'duels','Duelos aéreos perdidos':'duelslost','Veces regateado':'beaten','Pases completados':'passok','Volumen de pase':'passok','Pases fallados':'passfail','Balones al área':'crosses','Regates':'dribbles','Pérdidas':'lost','Tiros':'shots','Tiros a puerta':'shotson','Goles':'goals','Asistencias':'assists','Asistencia sin gol':'assistnogoal','Faltas cometidas':'foulc','Amarillas':'yellow','Segundas amarillas':'secondyellow','Rojas':'red','Gol en propia':'owngoal','Penaltis fallados':'penmiss','Faltas recibidas':'foulr'};const k=map[name];return k?m[k]:''}
+function daznBreakdown(m,p){
+ let M=Math.max(1,m.min),r=x=>x*90/M,sat=x=>1-Math.exp(-Math.max(0,x));
+ let ro=r(m.recov),pa=r(m.passok),pf=r(m.passfail),dr=r(m.dribbles),be=r(m.beaten),lo=r(m.lost),cl=r(m.clear),du=r(m.duels),dl=r(m.duelslost),it=r(m.inter),sh=r(m.shots),so=r(m.shotson),cr=r(m.crosses),fc=r(m.foulc),fr=r(m.foulr),pt=(m.passok+m.passfail)?m.passok/(m.passok+m.passfail):0,ap=(m.duels+m.duelslost)?m.duels/(m.duels+m.duelslost):0;
+ let parts=[
+  ['Recuperaciones',18*sat(ro/7),true],['Intercepciones',10*sat(it/2.5),true],['Despejes',8*sat(cl/2.5),true],['Duelos aéreos',8*sat(du/3.5)*(.55+.45*ap),true],
+  ['Duelos aéreos perdidos',-6*(1-Math.exp(-dl/3.5)),false],['Veces regateado',-5*(1-Math.exp(-be/1.5)),false],
+  ['Pases completados',20*sat(pa/42)*(.55+.45*pt),true],['Volumen de pase',7*sat(pa/65),true],['Pases fallados',-5*(1-Math.exp(-pf/7)),false],
+  ['Balones al área',4*sat(cr/3),true],['Regates',8*sat(dr/3.2),true],['Pérdidas',-4*(1-Math.exp(-lo/4)),false],
+  ['Tiros',8*sat(sh/1.7),true],['Tiros a puerta',5*sat(so/.7),true],['Goles',12*m.goals,true],['Asistencias',9*m.assists,true],['Asistencia sin gol',3*m.assistnogoal,true],
+  ['Faltas cometidas',-5*(1-Math.exp(-fc/5)),false],['Amarillas',-10*m.yellow,false],['Segundas amarillas',-10*m.secondyellow,false],['Rojas',-35*m.red,false],['Gol en propia',-8*m.owngoal,false],['Penaltis fallados',-8*m.penmiss,false],['Faltas recibidas',3*sat(fr/2.5),true]
+ ];
+ let rawBase=18*sat(ro/7)+10*sat(it/2.5)+8*sat(cl/2.5)+8*sat(du/3.5)*(.55+.45*ap)+6*Math.exp(-dl/3.5)+5*Math.exp(-be/1.5)+20*sat(pa/42)*(.55+.45*pt)+7*sat(pa/65)+5*Math.exp(-pf/7)+4*sat(cr/3)+8*sat(dr/3.2)+6*Math.exp(-be/1.2)+4*Math.exp(-lo/4)+8*sat(sh/1.7)+5*sat(so/.7)+12*m.goals+9*m.assists+3*m.assistnogoal-5*fc/5-10*m.yellow-10*m.secondyellow-35*m.red-8*m.owngoal-8*m.penmiss+3*sat(fr/2.5);
+ let scale=(.88+.12*Math.min(1,m.min/75))*(p==='MED'?1:p==='DEF'?.96:p==='DEL'?.92:.90);
+ let rawTarget=Math.max(1,Math.min(10,Math.round((5+rawBase/22*scale)*10)/10));
+ let abs=parts.reduce((a,x)=>a+Math.abs(x[1]),0)||1, factor=Math.max(.01,Math.min(.18,(rawTarget/10)*.12));
+ return {positive:parts.filter(x=>x[2]&&x[1]>=0).map(x=>({name:x[0],value:daValue(m,x[0]),pts:x[1]*factor})),negative:parts.filter(x=>!x[2]).map(x=>({name:x[0],value:daValue(m,x[0]),pts:x[1]*factor})),total:rawTarget};
+}
+function fantasyBreakdown(m,p){
+ let a=[];
+ const add=(name,value,pts)=>a.push({name,value,pts});
+ add('Minutos',m.min+"'",m.min>60?2:m.min>0?1:0);
+ add('Goles',m.goals,m.goals*(p==='DEL'?4:p==='MED'?5:6));
+ add('Asistencia de gol',m.assists,m.assists*3);
+ add('Asistencia sin gol',m.assistnogoal,m.assistnogoal);
+ add('Balones al área',m.crosses,Math.floor(m.crosses/2));
+ add('Penalti provocado',m.penalprov,m.penalprov*2);
+ add('Penalti cometido',m.penalcom,-m.penalcom*2);
+ add('Despejes',m.clear,Math.floor(m.clear/3));
+ add('Penaltis fallados',m.penmiss,-m.penmiss*2);
+ add('Goles en propia',m.owngoal,-m.owngoal*2);
+ add('Goles en contra',m.conceded,-Math.floor(m.conceded/2));
+ add('Tarjeta amarilla',m.yellow,-m.yellow);
+ add('Segundas amarillas',m.secondyellow,-m.secondyellow);
+ add('Tarjeta roja',m.red,-m.red*3);
+ add('Tiros a puerta',m.shotson,Math.floor(m.shotson/2));
+ add('Regates con éxito',m.dribbles,Math.floor(m.dribbles/2));
+ add('Balones recuperados',m.recov,Math.floor(m.recov/5));
+ add('Balones perdidos',m.lost,-Math.floor(m.lost/(p==='DEL'?12:p==='MED'?10:8)));
+ if(['POR','DEF','MED'].includes(p)&&m.min>60&&m.conceded===0)add('Portería a cero','Sí',2);
+ add('Puntos DAZN',dp(dazn(m,p)),dp(dazn(m,p)));
+ return a
+}
+function allStats(m){return [['Tiros',m.shots],['Tiros a puerta',m.shotson],['Pases completos',m.passok],['Pases fallados',m.passfail],['Regates completados',m.dribbles],['Veces regateado',m.beaten],['Pérdidas',m.lost],['Recuperaciones',m.recov],['Intercepciones',m.inter],['Despejes',m.clear],['Aéreos ganados',m.duels],['Aéreos perdidos',m.duelslost],['Faltas cometidas',m.foulc],['Faltas provocadas',m.foulr],['Goles',m.goals],['Asistencias',m.assists],['Minutos',m.min]].filter(x=>x[1]!==0||['Minutos'].includes(x[0]))}
+function saveMatch(){try{let m={date:q('date').value||new Date().toISOString().slice(0,10),rival:q('rival').value||'Rival',competition:q('competition').value||'Liga',min:v('min'),result:q('res').value};ids.forEach(x=>m[x]=v(x));let i=+q('edit').value;if(i>=0)s.matches[i]=m;else s.matches.push(m);s.matches.sort((a,b)=>a.date.localeCompare(b.date));s.marketUpdated='';marketDailyUpdate();save();q('form').style.display='none';render()}catch(e){console.error('Error al guardar partido:',e);alert('No se ha podido guardar el partido. Revisa los campos e inténtalo de nuevo.')}}
+function edit(i){let m=s.matches[i];q('edit').value=i;q('form').style.display='block';q('date').value=m.date;q('rival').value=m.rival;q('competition').value=m.competition||'Liga';q('min').value=m.min;q('res').value=m.result;ids.forEach(x=>q(x).value=m[x]||0);scrollTo(0,q('form').offsetTop-20)}function del(i,e){e&&e.stopPropagation();if(confirm('¿Eliminar este partido?')){s.matches.splice(i,1);s.marketUpdated='';save();render();marketDailyUpdate()}}
+function marketDailyUpdate(){
+ if(!Array.isArray(s.marketHistory))s.marketHistory=[];
+ if(typeof s.marketValue!=='number'||!Number.isFinite(s.marketValue))s.marketValue=0;
+ let today=new Date().toISOString().slice(0,10);
+ if(s.marketUpdated===today){drawChart();return}
+ let recent=s.matches.filter(m=>m.date<=today).slice(-5);
+ if(recent.length){
+  let avg=recent.reduce((a,m)=>a+fantasy(m,s.pos)+dp(dazn(m,s.pos)),0)/recent.length;
+  let avgD=recent.reduce((a,m)=>a+dazn(m,s.pos),0)/recent.length;
+  let avgMin=recent.reduce((a,m)=>a+m.min,0)/recent.length;
+  let delta=.04+Math.max(-.08,Math.min(.22,(avg-8)*.035+(avgD-7)*.008+(avgMin-60)*.001));
+  s.marketValue=Math.max(0,Math.round((s.marketValue+delta)*100)/100);
+ } else {
+  s.marketValue=0;
+  s.marketHistory=[];
+  s.marketUpdated='';
+  save();drawChart();return;
+ }
+ s.marketUpdated=today;
+ let byDate={};
+ [...s.marketHistory,{date:today,value:s.marketValue}].forEach(x=>{if(!x||!x.date||typeof x.value!=='number'||!Number.isFinite(x.value))return;let d=String(x.date).slice(0,10);byDate[d]=x.value});
+ s.marketHistory=Object.entries(byDate).sort((a,b)=>a[0].localeCompare(b[0])).map(([date,value])=>({date,value})).slice(-365);
+ if(s.marketValue>0&&s.marketHistory.length===1){let d=new Date(today+'T00:00:00');d.setDate(d.getDate()-1);s.marketHistory=[{date:d.toISOString().slice(0,10),value:0},{date:today,value:s.marketValue}]}
+ if(s.marketHistory.length===1&&s.marketHistory[0].date===today&&s.marketValue>0){
+  let d=new Date(today+'T00:00:00');d.setDate(d.getDate()-1);
+  s.marketHistory=[{date:d.toISOString().slice(0,10),value:0},{date:today,value:s.marketValue}];
+ }
+ save();drawChart();
+}
+function drawChart(){
+ let svg=q('marketChart'),h=[...(s.marketHistory||[])].sort((a,b)=>a.date.localeCompare(b.date));
+ if(!h.length){svg.innerHTML='<text x="320" y="78" text-anchor="middle">Aún no hay evolución registrada</text>';return}
+ let map={},today=new Date().toISOString().slice(0,10);
+ h.forEach(x=>{map[x.date]=(x.date===today&&typeof s.marketValue==='number')?s.marketValue:x.value});
+ h=Object.entries(map).sort((a,b)=>a[0].localeCompare(b[0])).map(([date,value])=>({date:String(date).slice(0,10),value:Number(value)||0}));
+ if(h.length===1&&h[0].value>0){let d=new Date(h[0].date+'T00:00:00');d.setDate(d.getDate()-1);h=[{date:d.toISOString().slice(0,10),value:0},h[0]]}
+ let W=640,H=150,p=18,vals=h.map(x=>x.value),min=Math.min(0,...vals),max=Math.max(...vals);
+ if(max===min)max=min+.1;
+ let X=i=>p+(W-2*p)*(i/Math.max(1,h.length-1)),Y=v=>H-p-(H-2*p)*(v-min)/(max-min),pts=h.map((x,i)=>`${X(i)},${Y(x.value)}`).join(' '),area=`${p},${H-p} ${pts} ${W-p},${H-p}`;
+ svg.innerHTML=`<line class="grid" x1="${p}" y1="${Y(min)}" x2="${W-p}" y2="${Y(min)}"/><line class="grid" x1="${p}" y1="${Y(max)}" x2="${W-p}" y2="${Y(max)}"/><polygon class="area" points="${area}"/><polyline class="line" points="${pts}"/>${h.map((x,i)=>`<circle class="dot" cx="${X(i)}" cy="${Y(x.value)}" r="3"/>`).join('')}<text x="${p}" y="${H-2}">${h[0].date.slice(5)}</text><text x="${W-p}" y="${H-2}" text-anchor="end">${h[h.length-1].date.slice(5)}</text><text x="${p}" y="12">${max.toFixed(2)} M€</text><text x="${p}" y="${H-24}">${min.toFixed(2)} M€</text>`;
+}
+function render(){
+ q('name').value=s.name||'Jaen';q('pos').value=s.pos||'MED';
+ let fs=s.matches.map(m=>fantasy(m,s.pos)),ns=s.matches.map(m=>dazn(m,s.pos)),ds=ns.map(dp),cs=fs.map((x,i)=>x+ds[i]);
+ let ft=fs.reduce((a,b)=>a+b,0),dt=ds.reduce((a,b)=>a+b,0),ct=cs.reduce((a,b)=>a+b,0),an=ns.length?ns.reduce((a,b)=>a+b,0)/ns.length:0;
+ q('tc').textContent=ct;q('an').textContent=ns.length?an.toFixed(1):'--';q('headerTotal').textContent=ct+' pts';
+ q('avatarText').style.display=s.photo?'none':'block';q('photo').style.display=s.photo?'block':'none';if(s.photo)q('photo').src=s.photo;
+ let totalMin=s.matches.reduce((a,m)=>a+m.min,0),available=s.matches.length*90,minsPct=available?totalMin/available*100:0;q('totalMinHeader').textContent=totalMin+'/'+available;q('minsPctHeader').textContent=minsPct.toFixed(0)+'%';
+ let season=[['Partidos',s.matches.length],['Minutos',`${totalMin}/${available}`],['% minutos',minsPct.toFixed(0)+'%'],['Puntos totales',ct],['Valoración global',ns.length?an.toFixed(1)+'/10':'--'],['Media puntos',s.matches.length?(ct/s.matches.length).toFixed(1):'0.0']];
+ q('seasonKpis').innerHTML=season.map(x=>`<div class="kpi"><b>${x[1]}</b><small>${x[0]}</small></div>`).join('');
+ let fields=[['recov','Recuperaciones'],['passok','Pases completos'],['dribbles','Regates'],['lost','Pérdidas'],['duels','Aéreos ganados'],['duelslost','Aéreos perdidos'],['shots','Tiros'],['shotson','Tiros a puerta']];
+ q('p90').innerHTML=fields.map(x=>{let tot=s.matches.reduce((a,m)=>a+(m[x[0]]||0),0);return `<div class="kpi"><b>${tot}</b><small>${x[1]} · ${(totalMin?tot*90/totalMin:0).toFixed(1)}/90</small></div>`}).join('')+`<div class="kpi"><b>${totalMin}/${available}</b><small>Minutos · ${minsPct.toFixed(0)}%</small></div>`;
+ let bars=q('bars');bars.innerHTML='';let mx=Math.max(1,...cs.map(Math.abs));cs.forEach((x,i)=>{let w=document.createElement('div');w.className='barwrap';w.innerHTML=`<div class="barvalue">${x} pts</div><div class="bar" style="height:${Math.max(4,Math.abs(x)/mx*105)}px" title="${x} puntos"></div><span class="barlabel">P${i+1}</span>`;bars.appendChild(w)});
+ let list=q('list');list.innerHTML='';
+ const groups=[['Liga','Partidos de liga'],['Amistoso','Amistosos'],['Torneo','Torneos'],['Copa','Copas'],['Otro','Otros']];
+ groups.forEach(([type,label])=>{let inds=s.matches.map((m,i)=>[m,i]).filter(([m])=>(m.competition||'Liga')===type);if(!inds.length)return;list.innerHTML+=`<h4 style="margin:14px 3px 7px;color:var(--sub)">${label}</h4>`;inds.reverse().forEach(([m,i])=>{let f=fs[i],n=ns[i],d=ds[i],t=f+d,res=m.result==='V'?'Victoria':m.result==='E'?'Empate':'Derrota';list.innerHTML+=`<div class="match" onclick="openMatch(${i})"><div class="r1"><div><div class="rival">${esc(m.rival)}</div><div class="result">${m.date} · ${m.min}' · ${res}</div></div><div style="text-align:right"><div class="matchscore">${t>0?'+':''}${t}</div><div class="result">⭐ ${n.toFixed(1)}/10 · ${m.min} min</div></div></div><div class="chips"><span class="chip">⚽ ${m.goals}</span><span class="chip">🎯 ${m.shotson}/${m.shots}</span><span class="chip">🔄 ${m.recov} rec</span><span class="chip">⚡ ${m.dribbles} reg</span><span class="chip">💪 ${m.duels} aéreos</span></div><div class="actions"><button class="mini" onclick="edit(${i});event.stopPropagation()">Editar</button><button class="mini danger" onclick="del(${i},event)">Eliminar</button></div></div>`})});
+ if(!s.matches.length)list.innerHTML='<div class="empty">Todavía no hay partidos. Añade el primero arriba.</div>';marketUI();drawChart()
+}
+function marketUI(){let v=s.marketValue||0,h=s.marketHistory||[],prev=h.length>1?h[h.length-2].value:null,d=prev===null?null:v-prev;q('marketValue').textContent=v.toFixed(2).replace('.',',')+' M€';q('marketDate').textContent=s.marketUpdated?'Actualizado: '+s.marketUpdated:'Valor de mercado simulado';let md=q('marketDelta');md.textContent=d===null?'—':(d>=0?'+':'')+d.toFixed(2).replace('.',',')+' M€';md.className='marketdelta'+(d!==null&&d<0?' down':'')}
+function openMatch(i){
+ let m=s.matches[i],f=fantasy(m,s.pos),n=dazn(m,s.pos),d=dp(n),t=f+d,b=fantasyBreakdown(m,s.pos),db=daznBreakdown(m,s.pos);
+ let points=b.map(x=>`<div class="pointrow"><span class="pointname">${x.name}</span><span class="pointvalue">${x.value??''}</span><span class="${x.pts>0?'plus':x.pts<0?'minus':'zero'}">${x.pts>0?'+':''}${x.pts}</span></div>`).join('');
+ let stats=allStats(m).map(x=>`<div class="detailstat"><b>${x[1]}</b><small>${x[0]}</small></div>`).join('');
+ let daznRows=(arr,positive)=>arr.map(x=>`<div class="pointrow"><span class="pointname">${x.name}</span><span class="pointvalue">${x.value??''}</span><span class="${positive?'plus':'minus'}">${positive?'+':''}${x.pts.toFixed(2)}</span></div>`).join('');
+ q('modalContent').innerHTML=`
+ <div style="padding-right:42px"><div class="note">${m.date} · ${esc(m.competition||'Liga')} · ${m.min}' · ${m.result==='V'?'Victoria':m.result==='E'?'Empate':'Derrota'}</div><h2 style="margin:4px 0 0">${esc(m.rival)}</h2></div>
+ <div class="scorebox"><div class="score"><b>${f}</b><small>Fantasy</small></div><div class="score"><b>${d}</b><small>DAZN /4</small></div><div class="score total"><b>${t}</b><small>Total conjunto</small></div></div>
+ <h3>Qué suma/resta Fantasy</h3><div>${points}</div>
+ <h3>Desglose DAZN</h3>
+ <div class="daznbox"><div class="daznmain"><div><div class="note">Puntuación DAZN personalizada</div><div class="dazn10">${n.toFixed(1)}<span style="font-size:13px">/10</span></div></div><div class="dazn4">${d}/4</div></div>
+ <h4 style="margin:12px 0 6px">Impactos positivos</h4>${daznRows(db.positive,true)||'<div class="note">Sin impactos positivos.</div>'}
+ <h4 style="margin:12px 0 6px">Impactos negativos</h4>${daznRows(db.negative,false)||'<div class="note">Sin impactos negativos.</div>'}</div>
+ <h3>Estadísticas del partido</h3><div class="detailstats">${stats||'<div class="note">Sin estadísticas registradas.</div>'}</div>`;
+ q('modal').classList.add('open')
+}
+function closeModal(){q('modal').classList.remove('open')}function esc(x){return String(x).replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}function exportData(){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(s,null,2)],{type:'application/json'}));a.download='jaen_fantasy_2026-27.json';a.click()}
+q('photoInput').addEventListener('change',e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{s.photo=r.result;save();render()};r.readAsDataURL(f)});q('modal').addEventListener('click',e=>{if(e.target===q('modal'))closeModal()});
+marketDailyUpdate();render();
+</script></body></html>
